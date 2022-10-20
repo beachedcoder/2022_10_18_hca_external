@@ -20,6 +20,8 @@ spec:
           value: "http://demo-service:8082"
         - name: SERVICE_PORT
           value: "8080"
+        - name: BUCKET
+          value: "roigcp-hca-u100-private"
         ports:
         - containerPort: 8080
             

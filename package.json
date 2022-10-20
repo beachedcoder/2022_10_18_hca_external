@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "SERVER=http://localhost:8082 BUCKET=roigcp-hca-u100-private node server.js",
-    "test": "SERVER=http://localhost:8082 mocha --exit"
+    "test": "SERVER=http://localhost:8082 BUCKET=roigcp-hca-u100-private mocha --exit"
   },
   "keywords": [],
   "author": "",
