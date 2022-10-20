@@ -154,8 +154,16 @@ app.post('/event',
     (req, res) => {
         
         // code for image upload goes here
-
-        postOnToServer(req, res, '');
+        if (req.files && req.files[0]) {
+            const fileName = `${uuidv4()}.jpg`
+            imageRepository.saveImage(req.files[0], fileName)
+            .then(() => {
+                postOnToServer(req, res, fileName);
+            }) ;
+        } else {
+            postOnToServer(req, res, '');
+        }
+        
     });
 
 
